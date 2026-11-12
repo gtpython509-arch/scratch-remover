@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+python-multipart
+scikit-image
+easydict
+PyYAML
+dominate
+einops
+huggingface_hub
+tensorboardX
+Pillow
+opencv-python-headless
+matplotlib
+dlib-bin; sys_platform == "win32"
+dlib; sys_platform != "win32"
+

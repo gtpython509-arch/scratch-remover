@@ -1,0 +1,15 @@
+[Unit]
+Description=BOPBTL Photo Restoration FastAPI Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/scratch-remover
+Environment="PATH=/opt/scratch-remover/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/opt/scratch-remover/.venv/bin/uvicorn app:app --host 127.0.0.1 --port 8000 --workers 1
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
